@@ -5,7 +5,10 @@ let result = document.getElementById("result");
 let predictButton = document.getElementById("btn");
 let euroValue;
 
-predictButton.addEventListener("click", () => {
+predictButton.addEventListener("click", (event) => {
+  // event.preventDefault();
+  const isValid = event.target.checkValidity();
+  console.log(isValid);
   const zipcodeValue = parseInt(document.getElementById("zipcode").value);
   const buildyearValue = parseInt(document.getElementById("buildyear").value);
   const bathroomsValue = parseInt(document.getElementById("bathrooms").value);
