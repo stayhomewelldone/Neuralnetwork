@@ -19,9 +19,19 @@ function loadData() {
   });
 }
 
-function checkData(data) {
+// async function checkData(data) {
   console.log("Data loaded!");
   // data voorbereiden
+  // await data.filter(
+  //   (item) =>
+  //     (item.Zipcode = !null && item.Buildyear != null && item.bathrooms != null)
+  // );
+  //   data.filter(
+  //     (item) =>
+  //       !isNaN(item.Zipcode) && !isNaN(item.Buildyear) && !isNaN(item.bathrooms)
+  //   );
+  // console.table(data);
+
   data.sort(() => Math.random() - 0.5);
   let trainData = data.slice(0, Math.floor(data.length * 0.8));
   testData = data.slice(Math.floor(data.length * 0.8) + 1);

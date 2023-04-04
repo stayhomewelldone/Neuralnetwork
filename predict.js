@@ -25,6 +25,8 @@ function modelLoaded() {
 }
 
 async function makePrediction(zipcode, buildyear, bathrooms) {
+  result.innerHTML = "";
+
   input = {
     zipcode: zipcode,
     buildyear: buildyear,

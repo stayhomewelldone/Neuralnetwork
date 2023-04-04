@@ -5,17 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
-
+    <link rel="stylesheet" href="predict.css" />
     <script defer src="predict.js" type="module"></script>
+
     <title>ML5 Neural Network Regression</title>
   </head>
 
   <body>
     <div><h2>ML5 Neural Network Regression</h2></div>
-    <input type="text" id="zipcode" placeholder="zipcode" />
-    <input type="text" id="buildyear" placeholder="buildyear" />
-    <input type="text" id="bathrooms" placeholder="bathrooms " />
-    <button id="btn">Voorspel de huisprijs!</button>
-    <div id="result"></div>
+    <form>
+      <h1>Predict the retailvalue of a house</h1>
+      <div class="question">
+        <input type="text" id="zipcode" />
+        <label>zipcode</label>
+      </div>
+      <div class="question">
+        <input type="text" id="buildyear" />
+        <label>buildyear</label>
+      </div>
+      <div class="question">
+        <input type="text" id="bathrooms" />
+        <label>bathrooms</label>
+      </div>
+      <button type="button" id="btn">Voorspel de huisprijs!</button>
+      <div class="result" id="result"></div>
+    </form>
   </body>
 </html>
