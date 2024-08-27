@@ -3,7 +3,7 @@ let inputs;
 let output;
 let inputHouse;
 let testData;
-
+let trainData;
 let save = document.getElementById("btn");
 
 save.addEventListener("click", () => {
@@ -19,7 +19,7 @@ function loadData() {
   });
 }
 
-// async function checkData(data) {
+async function checkData(data) {
   console.log("Data loaded!");
   // data voorbereiden
   // await data.filter(
@@ -33,7 +33,7 @@ function loadData() {
   // console.table(data);
 
   data.sort(() => Math.random() - 0.5);
-  let trainData = data.slice(0, Math.floor(data.length * 0.8));
+  trainData = data.slice(0, Math.floor(data.length * 0.8));
   testData = data.slice(Math.floor(data.length * 0.8) + 1);
 
   const options = {
